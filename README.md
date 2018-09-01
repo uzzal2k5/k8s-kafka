@@ -6,7 +6,7 @@ kubectl create -f kafka-zookeeper-deploy.yml
 DEPLOY AT AWS
     
    
-   Chamnge "KAFKA_ADVERTISED_HOST_NAME" value from  "awslbdnsname" with your public DNS (AWS LoadBalancer DNS Name ),
+   Change "KAFKA_ADVERTISED_HOST_NAME" value from  "awslbdnsname" with your public DNS (AWS LoadBalancer DNS Name ),
    Keep Service Name for Kafka Service same as "KAFKA_ADVERTISED_HOST_NAME" value
     
     ---
@@ -30,6 +30,12 @@ DEPLOY AT AWS
         app: kafka
 
 
+CHANGE EXTERNAL-IP
+
+ You can omit this segment or adjust according to your available public ip or the IP from where you want to access the kafka
+   
+    externalIPs:
+      - 10.32.0.5
 TEST KAFKA CLUSTER
     
     kubectl get pods

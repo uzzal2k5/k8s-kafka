@@ -15,7 +15,7 @@ spec:
         name: zookeeper-1
     spec:
       containers:
-      - name: zoo1
+      - name: zookeeper
         image: wurstmeister/zookeeper
         ports:
         - containerPort: 2181

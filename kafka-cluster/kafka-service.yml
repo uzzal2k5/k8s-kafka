@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kafka-service
+  name: awslbdnsname
   labels:
     app: kafka
 spec:
